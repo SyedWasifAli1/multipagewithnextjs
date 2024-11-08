@@ -1,101 +1,70 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <main className="main">
+        {/* Hero Section */}
+        <section className="hero">
+          <h1>Welcome to My Portfolio</h1>
+          <p>Your one-stop solution for all your needs</p>
+          <button className="ctaButton">Get Started</button>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Features Section */}
+        <section className="features">
+          <h2>Our Features</h2>
+          <div className="featureCards">
+            <div className="featureCard">
+              <h3>Feature 1</h3>
+              <p>Discover the best features we offer for your success.</p>
+            </div>
+            <div className="featureCard">
+              <h3>Feature 2</h3>
+              <p>Unlock the potential with our powerful tools.</p>
+            </div>
+            <div className="featureCard">
+              <h3>Feature 3</h3>
+              <p>Simple solutions to streamline your tasks.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="projects">
+          <h2>Our Projects</h2>
+          <div className="projectCards">
+            <div className="projectCard">
+              <img
+                src="/image/project1.png"
+                alt="Project 1"
+                className="projectImage"
+              />
+              <h3>Project 1</h3>
+              <p>A cutting-edge web application developed using Next.js and Node.js.</p>
+              <button className="viewButton">View Project</button>
+            </div>
+            <div className="projectCard">
+              <img
+                src="/image/project2.png"
+                alt="Project 2"
+                className="projectImage"
+              />
+              <h3>Project 2</h3>
+              <p>An innovative e-commerce platform powered by the MERN stack.</p>
+              <button className="viewButton">View Project</button>
+            </div>
+            <div className="projectCard">
+              <img
+                src="/image/project3.png"
+                alt="Project 3"
+                className="projectImage"
+              />
+              <h3>Project 3</h3>
+              <p>A dynamic dashboard for real-time analytics built with React and Firebase.</p>
+              <button className="viewButton">View Project</button>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
